@@ -1,13 +1,90 @@
 .main-container {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
     padding: 20px;
-    font-size: 24px;
-    color: BLACK;
+    color: black;
     background-color: white;
-}
-
-.user-d {
-    text-align: right;
-    font-size: 20px;
-    font-family: sans-serif;
-}
+    gap: 20px;
+  }
+  
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; 
+  }
+  
+  .user-d {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .container-body {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  
+  .left-section {
+    display: flex;
+    flex-direction: column; /* Align dropdown and display box vertically */
+    width: 30%; /* Adjust width as needed */  
+  }
+  
+  .dropdown-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .display-box {
+    height: 550px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+    text-align: left;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 30px; /* Space between dropdown and display box */
+  }
+  
+  .upload-container {
+    width: 20%;
+    height: 150px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .upload-container label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .uploaded-file {
+    margin-top: 10px;
+    font-size: 15px;
+    color: green;
+  }
+  
+  .convert-button {
+    margin-top: 150px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .convert-button:hover {
+    background-color: #45a049;
+  }
