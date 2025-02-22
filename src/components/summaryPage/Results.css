@@ -1,27 +1,178 @@
+/* Results Page Container */
 .results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+    color: black;
+    background-color: white;
+}
+
+/* Page Heading */
+.results-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
     text-align: center;
-    margin-top: 20px;
-  }
-  
-  .resume-preview {
-    width: 60%;
-    height: 500px;
-    border: 1px solid #ddd;
-    margin-top: 20px;
-  }
-  
-  .back-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
+}
+
+/* Tables */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Captions */
+.results-table caption {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    background: #150ab4;
     color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: left;
+}
+
+/* Table Headings */
+.results-table th {
+    background: #150ab4;
+    color: white;
+    font-size: 16px;
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Table Data */
+.results-table td {
+    font-size: 15px;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+/* Alternating Row Colors */
+.results-table tbody tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* Hover Effect */
+.results-table tbody tr:hover {
+    background: #e6f2ff;
+    transition: background 0.2s ease-in-out;
+}
+
+/* Issues Section */
+.issues-container {
+    text-align: left;
+    width: 100%;
+    padding: 15px;
+    background: #ffe6e6;
+    border-left: 5px solid #ff4d4d;
+    border-radius: 6px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.issues-container h3 {
+    color: #cc0000;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.issues-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.issues-container li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #150ab4;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .back-btn:hover {
-    background-color: #0056b3;
-  }
-  
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.back-btn:hover {
+    background: #150ab4;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .results-container {
+        padding: 15px;
+    }
+
+    .results-table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .results-container {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .results-table th,
+    .results-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .back-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .results-container h2 {
+        font-size: 22px;
+    }
+
+    .results-table caption {
+        font-size: 18px;
+    }
+
+    .results-table th,
+    .results-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .issues-container {
+        padding: 10px;
+    }
+
+    .issues-container h3 {
+        font-size: 16px;
+    }
+
+    .issues-container li {
+        font-size: 12px;
+    }
+}
