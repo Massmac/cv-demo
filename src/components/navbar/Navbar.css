@@ -1,0 +1,62 @@
+.navbar {
+    background: #150ab4;
+    color: white;
+    padding: 15px 20px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-item {
+    display: inline-block;
+  }
+  
+  .nav-menu .nav-item:first-child {
+    margin-right: auto; /* Pushes "Home" to the left */
+  }
+  
+  .nav-menu .nav-item:last-child {
+    margin-left: auto; /* Pushes "Contact" to the right */
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+    padding: 10px;
+  }
+  
+  .nav-link:hover {
+    color: #20caae;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+    }
+  
+    .nav-menu {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .nav-item {
+      width: 100%;
+      text-align: center;
+    }
+  }
