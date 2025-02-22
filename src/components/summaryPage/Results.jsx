@@ -10,8 +10,8 @@ export const ResultsPage = () => {
   // Sample data for demonstration
   const resumeData = {
     contactInfo: {
-      name: "John Doe",
-      email: "johndoe@example.com",
+      name: "Michael Tamatey",
+      email: "michaeltamatey@gmail.com",
       number: "+1 (123) 456-7890",
     },
     overview: {
