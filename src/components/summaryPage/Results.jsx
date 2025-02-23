@@ -15,10 +15,10 @@ export const ResultsPage = () => {
       number: "+1 (123) 456-7890",
     },
     overview: {
-      experience: "9",
-      grammar: "8",
+      experience: "7.5",
+      grammar: "6.5",
       sentenceStructure: "10",
-      writingClarification: "10",
+      writingClarification: "9.5",
     },
     issues: {
       bulletpoints: "Some points lack proper alignment",
@@ -44,10 +44,10 @@ export const ResultsPage = () => {
   return (
     <div className="results-container">
       <h2>Comparison Results</h2>
-      {jobTitle && <p><strong>Job Title:</strong> {jobTitle}</p>}
-
+       
       {/* Contact Information */}
       <div className="contact-info">
+         {jobTitle && <p><strong>Job Title:</strong> {jobTitle}</p>}
         <p><strong>Name:</strong> {resumeData?.contactInfo?.name}</p>
         <p><strong>Email:</strong> {resumeData?.contactInfo?.email}</p>
         <p><strong>Number:</strong> {resumeData?.contactInfo?.number}</p>

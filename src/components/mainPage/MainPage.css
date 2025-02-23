@@ -37,7 +37,7 @@
 .left-section {
     display: flex;
     flex-direction: column; 
-    width: 30%;  
+    width: 30%; 
 }
 
 /* Dropdown */
@@ -45,6 +45,7 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+    font-weight: bold;
 }
 
 /* Job Description Box */
