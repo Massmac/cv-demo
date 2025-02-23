@@ -47,16 +47,12 @@
   .auth-button {
     width: 100%;
     padding: 10px 15px;
-    background: #4caf50;
+    background: #150ab4;
     color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-  }
-  
-  .auth-button:hover {
-    background: #45a049;
   }
   
   .auth-error {

@@ -43,8 +43,9 @@ export const AuthSignUp = () => {
       });
 
       
-      console.log("User signed up successfully");
+      alert("User signed up successfully");
       setError(""); // Clear any previous error
+      return <Navigate to="/signin" replace />;  
     } catch (error) {
       console.error("Error signing up:", error.message);
       setError(error.message);

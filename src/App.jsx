@@ -30,7 +30,7 @@ function App() {
           {/* Redirect logged-in users to mainpage */}
           <Route path="/" element={user ? <Navigate to="/mainpage" replace /> : <AuthSignIn />} />
           <Route path="/signin" element={user ? <Navigate to="/mainpage" replace /> : <AuthSignIn />} />
-          <Route path="/signup" element={user ? <Navigate to="/mainpage" replace /> : <AuthSignUp />} />
+          <Route path="/signup" element={user ? <Navigate to="/signin" replace /> : <AuthSignUp />} />
 
           {/* Protected Routes (only accessible if user is logged in) */}
           <Route 
