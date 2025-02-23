@@ -5,6 +5,12 @@ import { doc, getDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import jobs from "./jobs.json";
 
+/*
+ Author: Michael Tamatey
+ Date: 20250222
+ Description: This class allows users to select job posting and upload resumes to compare 
+*/
+
 export const MainPage = () => {
   const [userDetails, setUserDetails] = useState(null);
   const [selectedJob, setSelectedJob] = useState(jobs[0]); // Default to first job

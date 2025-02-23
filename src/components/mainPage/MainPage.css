@@ -44,8 +44,9 @@
 .dropdown-container {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     font-weight: bold;
+    height: 60px;
 }
 
 /* Job Description Box */

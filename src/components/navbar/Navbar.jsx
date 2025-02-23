@@ -2,8 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { auth, db } from "../auth/Firebase";
-import { doc, getDoc } from "firebase/firestore";
 
+/*
+ Author: Michael Tamatey
+ Date: 20250222
+ Description: Navbar
+*/
 
 const Navbar = () => {
   async function handleLogout() {

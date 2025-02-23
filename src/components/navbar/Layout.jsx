@@ -2,6 +2,13 @@ import React from "react";
 import Navbar from "./Navbar";
 import { Outlet } from "react-router-dom";
 
+
+/*
+ Author: Michael Tamatey
+ Date: 20250222
+ Description: Layout class
+*/
+
 const Layout = () => {
   return (
     <>

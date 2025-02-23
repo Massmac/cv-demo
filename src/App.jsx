@@ -8,6 +8,14 @@ import { useEffect, useState } from "react";
 import { auth } from "./components/auth/Firebase";
 import { ResultsPage } from "./components/summaryPage/Results";
 
+/*
+ Author: Michael Tamatey
+ Date: 20250222
+ Description: This class is controls routes
+*/
+
+
+
 function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -18,10 +26,12 @@ function App() {
       setLoading(false); // Only stop loading once we have checked auth status
     });
 
-    return () => unsubscribe(); // Cleanup listener on unmount
+    // Cleanup listener on unmount
+    return () => unsubscribe(); 
   }, []);
 
-  if (loading) return <p>Loading...</p>; // Prevent flickering of login page while checking auth
+  // Prevent flickering of login page while checking auth
+  if (loading) return <p>Loading...</p>; 
 
   return (
     <Router>
@@ -30,7 +40,7 @@ function App() {
           {/* Redirect logged-in users to mainpage */}
           <Route path="/" element={user ? <Navigate to="/mainpage" replace /> : <AuthSignIn />} />
           <Route path="/signin" element={user ? <Navigate to="/mainpage" replace /> : <AuthSignIn />} />
-          <Route path="/signup" element={user ? <Navigate to="/signin" replace /> : <AuthSignUp />} />
+          <Route path="/signup" element={<AuthSignUp />} />
 
           {/* Protected Routes (only accessible if user is logged in) */}
           <Route 

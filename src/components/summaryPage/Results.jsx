@@ -2,6 +2,14 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Results.css";
 
+
+/*
+ Author: Michael Tamatey
+ Date: 20250222
+ Description: This class displays results when users click on compare in main page.
+*/
+
+
 export const ResultsPage = () => {
   const location = useLocation();
   const navigate = useNavigate();

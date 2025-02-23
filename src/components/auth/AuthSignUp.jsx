@@ -4,10 +4,17 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "./Firebase";
 import { setDoc, doc } from "firebase/firestore";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
+import { signOut } from "firebase/auth";
 
-// Initialize toast notifications
-//toast.configure();
+
+/*
+ Author: Michael Tamatey
+ Date: 20250222
+ Description: This class allows users to Register
+*/
+
 
 export const AuthSignUp = () => {
   const [firstName, setFirstName] = useState("");
@@ -16,6 +23,9 @@ export const AuthSignUp = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+
+  // Initialize navigate
+  const navigate = useNavigate(); 
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -35,17 +45,20 @@ export const AuthSignUp = () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-
+  
       await setDoc(doc(db, "Users", user.uid), {
         firstName: firstName,
         lastName: lastName,
         email: user.email,
       });
-
+  
+      alert("User signed up successfully! Please log in.");
       
-      alert("User signed up successfully");
-      setError(""); // Clear any previous error
-      return <Navigate to="/signin" replace />;  
+      // Sign out user immediately after signup
+      await signOut(auth);
+  
+      navigate("/signin");
+  
     } catch (error) {
       console.error("Error signing up:", error.message);
       setError(error.message);

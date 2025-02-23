@@ -4,6 +4,13 @@ import "./Auth.css";
 import {auth} from "./Firebase"
 import { signInWithEmailAndPassword } from "firebase/auth";
 
+
+/*
+ Author: Michael Tamatey
+ Date: 20250222
+ Description: This class allow users to log in 
+*/
+
 export const AuthSignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
