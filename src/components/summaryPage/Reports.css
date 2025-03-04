@@ -1,0 +1,39 @@
+.reports-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+    color: black;
+    background-color: white;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  button {
+    padding: 15px 17px;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }

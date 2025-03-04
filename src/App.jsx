@@ -7,6 +7,7 @@ import Layout from "./components/navbar/Layout";
 import { useEffect, useState } from "react";
 import { auth } from "./components/auth/Firebase";
 import { ResultsPage } from "./components/summaryPage/Results";
+import Reports from "./components/summaryPage/Reports";
 
 /*
  Author: Michael Tamatey
@@ -51,6 +52,11 @@ function App() {
           <Route 
             path="/results" 
             element={user ? <><Layout /><ResultsPage /></> : <Navigate to="/signin" replace />}
+          />
+          {/* Results Page Route (also protected) */}
+          <Route 
+            path="/reports" 
+            element={user ? <><Layout /><Reports /></> : <Navigate to="/signin" replace />}
           />
         </Routes>
       </div>

@@ -28,6 +28,9 @@ const Navbar = () => {
           <li className="nav-item">
             <Link to="/signin" className="nav-link" onClick={handleLogout}>Log out</Link>
           </li>
+          <li className="nav-item">
+            <Link to="/reports" className="nav-link">Reports</Link>
+          </li>
         </ul>
       </div>
     </nav>
