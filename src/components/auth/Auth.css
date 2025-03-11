@@ -1,109 +1,214 @@
-/* Auth.css */
-.auth-container {
-    display: flex;
-    justify-content: center;
+/* Default styling for large screens (desktops) */
+.left-section {
+  background: linear-gradient(#e8ae00, #976a00);
+  height: 100vh;
+  position: relative;
+  padding: 5rem;
+  /* General padding */
+}
+
+/* Style for the h1 */
+.left-section h1 {
+  position: absolute;
+  top: 20px;
+  /* Adjust top padding */
+  left: 5rem;
+  /* Adjust left padding */
+  width: 80%;
+  /* Allow wrapping */
+  word-break: break-word;
+  /* Break long words if necessary */
+}
+
+/* Style for the paragraph */
+.left-section p {
+  position: absolute;
+  top: 15%;
+  /* Adjust for spacing below the h1 */
+  left: 5rem;
+  /* Same left padding as h1 */
+}
+
+/* General styling for RightSection */
+.right-section {
+  /* background-color: #f5f5f5; */
+  padding: 3rem;
+  /* Default padding for larger screens */
+  max-width: 100%;
+  margin: auto;
+}
+
+/* Make sure the signup form is aligned and responsive */
+.right-section .signup-form {
+  width: 100%;
+}
+
+.right-section .logo {
+  position: absolute;
+  top: 20px;
+  /* Adjust top padding */
+  right: 20px;
+  height: 56px;
+  width: 146px;
+}
+/* Media query for tablet and below (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Adjust the padding for smaller screens */
+  .left-section {
+    padding: 4rem;
+  }
+
+  .right-section {
+    padding: 2.5rem;
+  }
+
+  /* Adjust font size for tablet */
+  .right-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .right-section p {
+    font-size: 1rem;
+  }
+}
+
+/* Media query for tablet and below (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Reduce the padding on smaller screens */
+  .left-section {
+    padding: 2rem;
+    /* Reduced padding */
+  }
+
+  .left-section h1 {
+    top: 10px;
+    /* Adjust top padding for small screens */
+    left: 10px;
+    /* Adjust left padding */
+    width: 100%;
+    /* Make h1 take full width */
+  }
+
+  .left-section p {
+    top: 15%;
+    /* Adjust positioning of paragraph */
+    left: 10px;
+    /* Adjust left padding */
+  }
+
+  /* Stack the inputs vertically on smaller screens */
+  .row {
+    flex-direction: column;
+  }
+
+  /* Adjust the padding for the right section */
+  .right-section {
+    padding: 2rem;
+  }
+
+  .signup-form {
+    width: 100%;
+  }
+
+  /* Make the logo and title more compact */
+  .d-flex {
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    background-color: #f9f9f9;
-    padding: 10px;
   }
-  
-  .auth-card {
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+
+  /* Adjust font size for smaller screens */
+  .right-section h2 {
+    font-size: 1.5rem;
   }
-  
-  .auth-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
+
+  .right-section p {
+    font-size: 0.875rem;
   }
-  
-  .auth-field {
-    margin-bottom: 15px;
-    text-align: left;
+}
+
+/* Media query for mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Adjust the padding for even smaller screens */
+  .left-section {
+    padding: 1.5rem;
   }
-  
-  .auth-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
+
+  .left-section h1 {
+    font-size: 1.25rem;
+    /* Adjust the font size for mobile */
+    left: 5px;
+    /* Adjust left padding */
   }
-  
-  .auth-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
+
+  .left-section p {
+    font-size: 0.75rem;
   }
-  
-  .auth-button {
-    width: 100%;
-    padding: 10px 15px;
-    background: #150ab4;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+
+  /* Adjust padding for right section */
+  .right-section {
+    padding: 1.5rem;
   }
-  
-  .auth-error {
-    color: #d32f2f;
-    font-size: 14px;
-    margin-bottom: 10px;
+
+  /* Make the signup form inputs a bit more compact */
+  .signup-form {
+    padding: 0.5rem;
   }
-  
-  .auth-footer {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #777;
+
+  .signup-form input,
+  .signup-form select {
+    font-size: 1rem;
+    /* Adjust the input font size */
   }
-  
-  .auth-link {
-    color: #007bff;
-    text-decoration: none;
+
+  .btn {
+    padding: 0.75rem 1rem;
+    /* Larger buttons for mobile */
   }
-  
-  .auth-link:hover {
-    text-decoration: underline;
+
+  /* Reduce the spacing between sections */
+  .row {
+    flex-direction: column;
   }
-  
-  @media (max-width: 768px) {
-    .auth-card {
-      padding: 15px;
-      max-width: 90%;
-    }
-  
-    .auth-title {
-      font-size: 20px;
-    }
-  
-    .auth-button {
-      font-size: 14px;
-      padding: 8px 10px;
-    }
-  
-    .auth-input {
-      font-size: 12px;
-      padding: 8px;
-    }
+
+  /* Make headings smaller on mobile */
+  .right-section h2 {
+    font-size: 1.25rem;
   }
-  
-  @media (max-width: 480px) {
-    .auth-title {
-      font-size: 18px;
-    }
-  
-    .auth-footer {
-      font-size: 12px;
-    }
+
+  .right-section p {
+    font-size: 0.75rem;
   }
-  
+}
+
+/* Media query for extra-small screens (max-width: 320px) */
+@media (max-width: 320px) {
+  .left-section h1 {
+    font-size: 1rem;
+    /* Even smaller font size */
+  }
+
+  .right-section {
+    padding: 1rem;
+  }
+
+  .signup-form input,
+  .signup-form select {
+    font-size: 0.875rem;
+    /* Smaller font size for inputs */
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    /* Adjust button size */
+  }
+
+  .right-section h2 {
+    font-size: 1rem;
+    /* Smaller heading */
+  }
+
+  .right-section p {
+    font-size: 0.625rem;
+    /* Smaller text */
+  }
+}
